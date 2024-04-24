@@ -1,0 +1,150 @@
+.Post {
+    background: var(--gray-cards-800);
+    border-radius: 8px;
+    padding: 4rem;
+}
+
+.Post + .Post {
+    margin-top: 3.2rem ;
+}
+
+.content {
+    max-width: 67.8rem;
+    margin-bottom: 2.5rem;
+
+    line-height: 160%;
+    color: var(--gray-text-300);    
+
+}
+
+.content p {
+    margin-top: 3.7rem;
+}
+
+.content a {
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--green-500);
+}
+
+.content a:hover {
+    color: var(--green-300);
+}
+
+.Post > header {          
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 2.2rem;
+}
+
+.authorinfo strong {
+    display: block;
+    line-height: 160%;
+    color: var(--gray-title-100);
+}
+
+.authorinfo span {
+    display: block;
+    color: var(--gray-400);
+    font-size: 1.4rem;
+}
+
+.Post > header time {
+    line-height: 160%;
+    font-size: 1.4rem;
+    color: var(--gray-400)
+}
+
+.comentForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+
+    width: 100%;
+    margin-top: 2.4rem;
+    padding-top:2.4rem ;
+
+    border-top: 1px solid var(--gray-line);
+}
+
+.comentForm > strong {
+    line-height: 160%;
+    color: var( --gray-title-100);
+}
+
+.comentForm textarea {
+    height: 9.6rem;
+    background: var( --gray-background-900);
+    border: 0;
+    resize: none;                
+    border-radius: 8px;
+    padding: 1.3rem 1.6rem;
+    color: var(--gray-text-300);
+    line-height: 140%;
+}
+
+/*fazendo com que o butão so aparesa em caso o elemento esteja em focus*/
+.comentForm button[type=submit] {
+    padding: 1.6rem 2.4rem;
+    width: 12rem;
+    border: 0;
+    border-radius: 8px;
+    background: var(--green-500);
+    color: var(--white);
+    font-weight: 700;
+    cursor: pointer;
+    transition: backgrond-color .2s;
+}
+
+.comentForm footer {
+    visibility: hidden;
+    max-height: 0;
+}
+
+.comentForm:focus-within footer {
+    visibility: visible;
+    max-height: none;
+}
+
+
+.comentForm button[type=submit]:not(:disabled):hover {
+    background: var(--green-300);
+}
+
+/*quando o botão está desabilitado*/
+
+.comentForm button[type=submit]:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.commentList {
+    margin-top: 3.2rem;
+}
+
+
+
+
+
+
+
+/*
+    O mais é responsável por estilizar o elemento antes de outro elemento
+    Porém caso não haja nenhum elemento antes, ele não ganhará nenhuma estilização setada.
+
+    .Post > header o css buscará as tags header que estão no primeiro nível dentro do Post
+
+    reside = sem escroll, o usuario não pode redimencionar o elemento
+
+    :not(:disabled):hover = quando meu botão não estiver desabilitado ocorra 
+    a adição de elementos 
+    
+    cursor: not-alowed = não permite que o cursor click em nada quando essa propriedade 
+    está habilitada 
+*/
