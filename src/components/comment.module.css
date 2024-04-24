@@ -1,0 +1,93 @@
+.comment {
+    margin-top: 2.4rem;
+    display: flex ;
+    gap: 1.6rem;
+}
+
+.commentBox {    
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    flex: 1 ;
+}
+
+.commentBox footer button {
+    display: flex;
+    align-items: center;
+
+    background: transparent;
+    border: 0;
+    border-radius: 3px;      /* outline tab*/
+    color: var(--gray-400);
+    cursor: pointer;
+}
+
+.commentBox footer button:hover {
+    color: var(--green-300);
+}
+
+.commentBox footer button svg {
+    margin-right: 1rem;
+}
+
+.commentBox footer button span::before {
+    content: "\2022";
+    padding: 0 .5rem;
+}
+
+.commentContent {
+    background: var(--gray-700);
+    padding: 1.6rem;
+    height: 12rem;
+    border-radius: 9px;
+}
+
+.commentContent header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.6rem;
+}
+
+.commentContent > p {
+    color: var(--gray-text-300);
+    font-size: 1.4rem;
+}
+
+.commentContent header strong {
+    display: block;
+    line-height: 160%;
+    font-size: 1.4rem;
+    color: var(----gray-title-100);
+}
+
+.commentContent header time {
+    display: block;
+    color: var(--gray-400);
+    font-size: 1.2rem;
+}
+
+.commentContent header button {
+    background: transparent;
+    border: 0;
+    color: var(--gray-400);
+    cursor: pointer;
+    line-height: 0;
+    border-radius: 3px;
+}
+
+.commentContent header button:hover {
+    color: var(--red-500);
+}
+
+
+
+
+
+
+/*
+    flex: 1 será responsável por permitir que a classe ocupe o máximo de espaço possível 
+
+    content \2022 é a criação de um conteudo que tem a dimenção de um ponto 
+
+*/
