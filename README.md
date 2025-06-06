@@ -1,5 +1,7 @@
 # React + TypeScript + Vite
 
+</br>
+
 ## Notice 
 This project was based on a course challenge, but it was used to consolidate my knowledge in React with TypeScript.
 I worked on concepts of componentization, props, states, and performance with Vite
